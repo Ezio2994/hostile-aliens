@@ -1,10 +1,10 @@
-motherShip = document.querySelector(".mother article p");
-defenceShips = document.querySelectorAll(".defence article p");
-defenceShipsWhole = document.querySelectorAll(".defence article");
-attackShips = document.querySelectorAll(".attack article p");
-attackShipsWhole = document.querySelectorAll(".attack article");
+const motherShip = document.querySelector(".mother article p");
+const defenceShips = document.querySelectorAll(".defence article p");
+const defenceShipsWhole = document.querySelectorAll(".defence article");
+const attackShips = document.querySelectorAll(".attack article p");
+const attackShipsWhole = document.querySelectorAll(".attack article");
 
-window.addEventListener("keydown", () => {
+window.addEventListener("keyup", () => {
   if (event.keyCode === 32) {
     shot();
   }
@@ -25,7 +25,7 @@ const shot = () => {
         } else {
             won()
     }} else if (random === 1) {
-        if (Number(defenceShips[random2].innerText) > 0) {
+        if (Number(defenceShips[random2].innerText) > 10) {
             defenceShips[random2].innerText = Number(defenceShips[random2].innerText) - 10;
         } else {
             defenceShipsWhole[random2].style.display = 'none';
