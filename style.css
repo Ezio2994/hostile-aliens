@@ -10,10 +10,12 @@ body {
   width: 100%;
 }
 
-p {
+article {
   border: 3px solid black;
-  width: 100px;
+  width: 150px;
   padding: 20px;
+  text-align: center;
+  line-height: 30px;
 }
 
 .defence,
